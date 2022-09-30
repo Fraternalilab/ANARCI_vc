@@ -1,0 +1,778 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             /var/folders/l2/sn2vj9f97yz3hpcw81d2fjrw0000gv/T/tmpapl68lj2.fasta
+# target HMM database:             dat/HMMs/C_ONLY.hmm
+# output directed to file:         test_hmmscan_result/test_hmmscan_out7c2l_H_vc_c.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       7c2l:H  [L=458]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+      6e-65  207.8  17.4    4.4e-53  169.3  10.2    3.3  3  rhesus_H_C1  
+    2.9e-64  206.0  25.0    4.2e-46  147.0   9.7    4.0  4  human_H_C1   
+    2.1e-55  177.0  20.7    1.3e-36  116.0   6.5    3.7  4  mouse_H_C1   
+    6.7e-53  168.6  21.5    1.2e-40  128.9   9.1    3.6  4  pig_H_C1     
+    9.5e-51  162.0  19.1    5.7e-36  114.1   9.5    3.3  3  alpaca_H_C1  
+    1.6e-40  128.5  20.1    2.1e-27   85.9   5.6    4.6  4  rabbit_H_C1  
+    1.5e-28   89.6  14.9    8.8e-18   54.7   0.3    3.4  3  mouse_L_CC   
+    2.3e-28   89.1  13.5    2.8e-17   53.1   0.2    3.2  3  rat_L_CC     
+    1.1e-27   86.8  14.9    2.4e-14   43.5   0.2    3.2  3  rhesus_L_CC  
+    1.2e-26   83.3  12.7      4e-14   42.7   0.3    3.4  4  rabbit_L_CC  
+      2e-26   82.8  17.3    1.3e-13   41.2   0.2    3.2  3  human_L_CC   
+    3.8e-24   75.5  12.9    6.5e-12   35.8   0.1    3.4  3  pig_L_CC     
+      1e-22   70.5  12.6    3.1e-10   29.9   0.2    3.7  3  human_K_CC   
+    5.7e-18   55.2  18.4      8e-13   38.5   5.8    4.2  4  rat_H_C1     
+    1.1e-17   54.3  13.9    3.6e-10   29.9   0.2    3.7  3  rabbit_K_CC  
+
+
+Domain annotation for each model (and alignments):
+>> rhesus_H_C1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  169.3  10.2   3.6e-53   4.4e-53       4     123 ..     128     227 ..     125     246 .. 0.92
+   2 !    8.2   0.1    0.0016    0.0019       9     119 ..     248     346 ..     243     356 .. 0.69
+   3 !   33.9   0.0   1.9e-11   2.3e-11       8     111 ..     355     442 ..     350     454 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 169.3 bits;  conditional E-value: 3.6e-53
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  rhesus_H_C1   4 lasiksPsvFPLiPssksiasnlessvaLGCLvkdYFPllePvtvsWdaGsLtrllllsvmtlPavlfssslllllGlYalislltvssasllllake 101
+                   as+k+PsvFPL+Pssks++     ++aLGCLvkdYFP  ePvtvsW++G+Lt+    +v+t+Pavl+ss      GlY+l+s++tv+s+sl   +++
+       7c2l:H 128 SASTKGPSVFPLAPSSKSTS---GGTAALGCLVKDYFP--EPVTVSWNSGALTS----GVHTFPAVLQSS------GLYSLSSVVTVPSSSL---GTQ 207
+                  79******************...67*************..**************....************......***************9...*** PP
+
+                  xxxxxxxxxxxxxxxxxxxxxx RF
+  rhesus_H_C1 102 tyvCnvvhkPllssadkekrkt 123
+                  ty+Cnv+hkP  s+++++k++ 
+       7c2l:H 208 TYICNVNHKP--SNTKVDKKVE 227
+                  **********..*******993 PP
+
+  == domain 2  score: 8.2 bits;  conditional E-value: 0.0016
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxx RF
+  rhesus_H_C1   9 sPsvFPLiPssksiasnlessvaLGCLvkdYFPllePvtvsWdaGsLtrllllsvmtlPavlfssslllllGlYalislltvss.asllllaketyvC 105
+                  +PsvF   P  k +      +  + C+v d       v   W    ++    +  +t P   +  s       Y ++s+ltv    +l     + y C
+       7c2l:H 248 GPSVFLFPPKPKDTLMI-SRTPEVTCVVVDVSHEDPEVKFNWYVDGVEV---HNAKTKPREEQYNS------TYRVVSVLTVLHqDWL---NGKEYKC 332
+                  67887777777777743.6677778888887763334677776666655...56777777777775......9*********751676...5556*** PP
+
+                  xxxxxxxxxxxxxx RF
+  rhesus_H_C1 106 nvvhkPllssadke 119
+                  +v  k l +  +k 
+       7c2l:H 333 KVSNKALPAPIEKT 346
+                  **999754554444 PP
+
+  == domain 3  score: 33.9 bits;  conditional E-value: 1.9e-11
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  rhesus_H_C1   8 ksPsvFPLiPssksiasnlessvaLGCLvkdYFPllePvtvsWdaGsLtrllllsvmtlPavlfssslllllGlYalislltvssasllllaketyvC 105
+                  + P v+ L Ps  +++ n    v+L CLvk+++P    + v W++        +  +t P vl s       G + l s ltv  +   +   + + C
+       7c2l:H 355 REPQVYTLPPSRDELTKN---QVSLTCLVKGFYP--SDIAVEWESNGQPE---NNYKTTPPVLDSD------GSFFLYSKLTVDKSR--WQQGNVFSC 436
+                  5799******99999966...9************..99******977666...6899*******99......9**********9887..367899*** PP
+
+                  xxxxxx RF
+  rhesus_H_C1 106 nvvhkP 111
+                   v h+ 
+       7c2l:H 437 SVMHEA 442
+                  ****87 PP
+
+>> human_H_C1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.3   0.0      0.89       1.1      27      50 ..      15      36 ..       4      44 .. 0.68
+   2 !  147.0   9.7   3.5e-46   4.2e-46       4     129 ..     128     232 ..     125     250 .. 0.91
+   3 !   17.2   0.6   3.5e-06   4.1e-06      10     110 ..     249     337 ..     245     351 .. 0.79
+   4 !   50.5   0.6   1.9e-16   2.3e-16       6     123 ..     353     453 ..     348     457 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: -0.3 bits;  conditional E-value: 0.89
+                xxxxxxxxxxxxxxxxxxxxxxxx RF
+  human_H_C1 27 essvalgCLvkdyfPqlepvtvtw 50
+                 +sv + C v +y    + +++ w
+      7c2l:H 15 GASVKVSCKVSGYTL--TELSMHW 36
+                677888888888866..6666666 PP
+
+  == domain 2  score: 147.0 bits;  conditional E-value: 3.5e-46
+                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  human_H_C1   4 lastksPsvFPLascskspsdnlessvalgCLvkdyfPqlepvtvtwksgalssisllttrtfPavlrssslllllglYatsSqltvpskqlmqgakke 102
+                  astk+PsvFPLa++sks+s    +++algCLvkdyfP  epvtv+w+sgal+s    +++tfPavl+ss      glY++sS++tvps++l   ++++
+      7c2l:H 128 SASTKGPSVFPLAPSSKSTS---GGTAALGCLVKDYFP--EPVTVSWNSGALTS----GVHTFPAVLQSS------GLYSLSSVVTVPSSSL---GTQT 208
+                 69*****************8...8**************..**************....************......8**************9...**** PP
+
+                 xxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  human_H_C1 103 ytCkVqHkPsstnkskdktvplPllll 129
+                 y+C+V+HkP  +n+++dk+v+ P  + 
+      7c2l:H 209 YICNVNHKP--SNTKVDKKVE-PKSCD 232
+                 *********..*********6.83333 PP
+
+  == domain 3  score: 17.2 bits;  conditional E-value: 3.5e-06
+                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  human_H_C1  10 PsvFPLascskspsdnlessvalgCLvkdyfPqlepvtvtwksgalssisllttrtfPavlrssslllllglYatsSqltvpskqlmqgakkeytCkVq 108
+                 PsvF   +  k++   +  +  + C v d   +   v   w+  +  +   + ++t P   + +      + Y + S+ltv  +++  +++key+CkV 
+      7c2l:H 249 PSVFLFPPKPKDTLM-ISRTPEVTCVVVDVSHEDPEVKFNWYVDGVEV---HNAKTKPREEQYN------STYRVVSVLTVLHQDW--LNGKEYKCKVS 335
+                 666655555555543.45566788988888775556999999999988...6899999999999......7***************..99********8 PP
+
+                 xx RF
+  human_H_C1 109 Hk 110
+                  k
+      7c2l:H 336 NK 337
+                 76 PP
+
+  == domain 4  score: 50.5 bits;  conditional E-value: 1.9e-16
+                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  human_H_C1   6 stksPsvFPLascskspsdnlessvalgCLvkdyfPqlepvtvtwksgalssisllttrtfPavlrssslllllglYatsSqltvpskqlmqgakkeyt 104
+                  ++ P+v+ L ++  +     + +v l CLvk+++P    + v w+s+++ +   +  +t P+vl+s+      g + + S ltv  + +  ++++ + 
+      7c2l:H 353 QPREPQVYTLPPSRDELT---KNQVSLTCLVKGFYP--SDIAVEWESNGQPE---NNYKTTPPVLDSD------GSFFLYSKLTVDKSRW--QQGNVFS 435
+                 577899999999888886...679************..9***********99...699**********......79**************..88999** PP
+
+                 xxxxxxxxxxxxxxxxxxx RF
+  human_H_C1 105 CkVqHkPsstnkskdktvp 123
+                 C V H+ +  n+  +k ++
+      7c2l:H 436 CSVMHE-ALHNHYTQKSLS 453
+                 *****9.677777777665 PP
+
+>> mouse_H_C1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.5   0.0       1.6         2      25      52 ..      13      38 ..       4      43 .. 0.71
+   2 !  116.0   6.5   1.1e-36   1.3e-36       4     125 ..     128     228 ..     125     249 .. 0.90
+   3 !   11.1   0.3   0.00021   0.00026      10     111 ..     249     338 ..     242     351 .. 0.73
+   4 !   58.8   0.4   4.3e-19   5.1e-19       6     119 ..     353     449 ..     348     457 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: -1.5 bits;  conditional E-value: 1.6
+                xxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  mouse_H_C1 25 llkssvtlGCLvkdyfPflepvtvtWns 52
+                  ++sv + C v +y      +++ W  
+      7c2l:H 13 KPGASVKVSCKVSGYTL--TELSMHWVR 38
+                45789999999999983..778888765 PP
+
+  == domain 2  score: 116.0 bits;  conditional E-value: 1.1e-36
+                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  mouse_H_C1   4 lastrnPsvypLapcksptsdllkssvtlGCLvkdyfPflepvtvtWnskslssviqlgvrtFPallqsGllllllglytlssqVtvpaseilegsset 102
+                  ast+ Psv+pLap +  ts   +   +lGCLvkdyfP  epvtv+Wns++l+s    gv+tFPa+lqs       gly+lss Vtvp+s++     +t
+      7c2l:H 128 SASTKGPSVFPLAPSSKSTS---GGTAALGCLVKDYFP--EPVTVSWNSGALTS----GVHTFPAVLQSS------GLYSLSSVVTVPSSSL---GTQT 208
+                 589*************9999...99*************..**************....***********8......9**************9...99** PP
+
+                 xxxxxxxxxxxxxxxxxxxxxxx RF
+  mouse_H_C1 103 vtCkvahpallsskekdlkvpis 125
+                  +C+v+h    s++++d+kv  +
+      7c2l:H 209 YICNVNHK--PSNTKVDKKVE-P 228
+                 *******9..5*********6.4 PP
+
+  == domain 3  score: 11.1 bits;  conditional E-value: 0.00021
+                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  mouse_H_C1  10 PsvypLapcksptsdllkssvtlGCLvkdyfPflepvtvtWnskslssviqlgvrtFPallqsGllllllglytlssqVtvpaseilegssetvtCkva 108
+                 Psv++  p + +t  +++    + C v d       v++ W+ ++ +    +  +t P + q          y ++s +tv+ + +l  ++++ +Ckv 
+      7c2l:H 249 PSVFLFPPKPKDTL-MISRTPEVTCVVVDVSHEDPEVKFNWYVDGVEV---HNAKTKPREEQYN------STYRVVSVLTVLHQDWL--NGKEYKCKVS 335
+                 66665555555443.4555556667777776433359999*9999999...4677777777766......9***************5..56889****9 PP
+
+                 xxx RF
+  mouse_H_C1 109 hpa 111
+                   a
+      7c2l:H 336 NKA 338
+                 886 PP
+
+  == domain 4  score: 58.8 bits;  conditional E-value: 4.3e-19
+                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  mouse_H_C1   6 strnPsvypLapcksptsdllkssvtlGCLvkdyfPflepvtvtWnskslssviqlgvrtFPallqsGllllllglytlssqVtvpaseilegssetvt 104
+                 + r+P+vy L p   +++   k++v l CLvk+++P  + + v W+s+++ +   +  +t P++l s+      g + l s++tv  s +   +++ + 
+      7c2l:H 353 QPREPQVYTLPPSRDELT---KNQVSLTCLVKGFYP--SDIAVEWESNGQPE---NNYKTTPPVLDSD------GSFFLYSKLTVDKSRW--QQGNVFS 435
+                 5699***********999...***************..*************9...69***********......****************..99999** PP
+
+                 xxxxxxxxxxxxxxx RF
+  mouse_H_C1 105 Ckvahpallsskekd 119
+                 C+v h+al  +   +
+      7c2l:H 436 CSVMHEAL-HNHYTQ 449
+                 ******84.444333 PP
+
+>> pig_H_C1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.1   0.0       2.2       2.7      26      50 ..      14      36 ..       4      43 .. 0.58
+   2 !  128.9   9.1   9.6e-41   1.2e-40       4     128 ..     128     232 ..     125     251 .. 0.90
+   3 ?    3.9   0.1     0.031     0.037      77     111 ..     306     338 ..     246     355 .. 0.76
+   4 !   43.6   0.5   1.8e-14   2.2e-14       9     117 ..     356     448 ..     348     457 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: -2.1 bits;  conditional E-value: 2.2
+              xxxxxxxxxxxxxxxxxxxxxxxxx RF
+  pig_H_C1 26 leslvalgCLvrdyfPslepvTvtW 50
+               + +v ++C v++y      + + W
+    7c2l:H 14 PGASVKVSCKVSGYTL--TELSMHW 36
+              3556666677776654..4444544 PP
+
+  == domain 2  score: 128.9 bits;  conditional E-value: 9.6e-41
+               xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  pig_H_C1   4 lasktaPsvyPLascsrdpsdlleslvalgCLvrdyfPslepvTvtWnsgalssvssqsvqtFPsvlqgsslllllglYslsSqvtlpaeslpqdsekilt 104
+                as ++Psv+PLa+ s+ +s   ++  algCLv+dyfP  epvTv+Wnsgal+s    +v+tFP+vlq+s      glYslsS vt+p++sl    ++++ 
+    7c2l:H 128 SASTKGPSVFPLAPSSKSTS---GGTAALGCLVKDYFP--EPVTVSWNSGALTS----GVHTFPAVLQSS------GLYSLSSVVTVPSSSL---GTQTYI 210
+               57899**************9...9**************..**************....************......9***************...****** PP
+
+               xxxxxxxxxxxxxxxxxxxxxxxx RF
+  pig_H_C1 105 CeVqHpalltktkksvsvsgklll 128
+               C+V+H    ++tk++++v  k + 
+    7c2l:H 211 CNVNHK--PSNTKVDKKVEPKSCD 232
+               *****9..5*********766333 PP
+
+  == domain 3  score: 3.9 bits;  conditional E-value: 0.031
+               xxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxx RF
+  pig_H_C1  77 lllglYslsSqvtlpae.slpqdsekiltCeVqHpa 111
+                +++ Y + S +t++ + +l     k ++C+V   a
+    7c2l:H 306 QYNSTYRVVSVLTVLHQdWL---NGKEYKCKVSNKA 338
+               34589*******99876266...999******9876 PP
+
+  == domain 4  score: 43.6 bits;  conditional E-value: 1.8e-14
+               xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  pig_H_C1   9 aPsvyPLascsrdpsdlleslvalgCLvrdyfPslepvTvtWnsgalssvssqsvqtFPsvlqgsslllllglYslsSqvtlpaeslpqdsekiltCeVqH 109
+                P+vy L +   +     +++v l CLv++++P  + + v W+s+ + +   ++ +t P+vl++       g + l S++t+  +    +  +++ C+V H
+    7c2l:H 356 EPQVYTLPPSRDELT---KNQVSLTCLVKGFYP--SDIAVEWESNGQPE---NNYKTTPPVLDSD------GSFFLYSKLTVDKSRW--QQGNVFSCSVMH 440
+               599**9988777764...9**************..9*******999988...89**********9......999999*****99997..67889******* PP
+
+               xxxxxxxx RF
+  pig_H_C1 110 palltktk 117
+                al+ + +
+    7c2l:H 441 EALHNHYT 448
+               *8554332 PP
+
+>> alpaca_H_C1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  114.1   9.5   4.7e-36   5.7e-36       4     127 ..     128     231 ..     125     248 .. 0.88
+   2 !   14.1   0.1   3.2e-05   3.8e-05      10     111 ..     249     338 ..     242     355 .. 0.80
+   3 !   39.6   0.2   4.1e-13     5e-13       9     113 ..     356     444 ..     349     455 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 114.1 bits;  conditional E-value: 4.7e-36
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  alpaca_H_C1   4 lestkaPsvfPLtaccsdtsdllestValgCLvrgflPplepvtvtWslgalnsvsllsvstfpsvqvlsslllllglytlssqvtvllesssvlqgk 101
+                   +stk PsvfPL+  ++ ts   + t algCLv++++P  epvtv+W++gal s    +v+tfp+v  +s      gly+lss vtv+ +s   l  +
+       7c2l:H 128 SASTKGPSVFPLAPSSKSTS---GGTAALGCLVKDYFP--EPVTVSWNSGALTS----GVHTFPAVLQSS------GLYSLSSVVTVPSSS---LGTQ 207
+                  69***********6666666...99*************..**************....************......6***********999...6*** PP
+
+                  xxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  alpaca_H_C1 102 eliCkVaHpallsssksdvkVplrll 127
+                  + iC+V H    s +k+d+kV ++ +
+       7c2l:H 208 TYICNVNHK--PSNTKVDKKVEPKSC 231
+                  *********..6*********88733 PP
+
+  == domain 2  score: 14.1 bits;  conditional E-value: 3.2e-05
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  alpaca_H_C1  10 PsvfPLtaccsdtsdllestValgCLvrgflPplepvtvtWslgalnsvsllsvstfpsvqvlsslllllglytlssqvtvllesssvlqgkeliCkV 107
+                  Psvf      +dt  ++++t    C v +       v++ W + +  +   +  +t+p     +      + y ++s +tvl +    l+gke  CkV
+       7c2l:H 249 PSVFLFPPKPKDTL-MISRTPEVTCVVVDVSHEDPEVKFNWYVDGVEV---HNAKTKPREEQYN------STYRVVSVLTVLHQDW--LNGKEYKCKV 334
+                  77776666667777.678888888999998876567******999999...5788888888877......7***********9997..********** PP
+
+                  xxxx RF
+  alpaca_H_C1 108 aHpa 111
+                     a
+       7c2l:H 335 SNKA 338
+                  8664 PP
+
+  == domain 3  score: 39.6 bits;  conditional E-value: 4.1e-13
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  alpaca_H_C1   9 aPsvfPLtaccsdtsdllestValgCLvrgflPplepvtvtWslgalnsvsllsvstfpsvqvlsslllllglytlssqvtvllesssvlqgkeliCk 106
+                   P v+ L  ++ d     + +V l CLv+gf P    + v W++ ++        + ++++ vl s     g + l s++tv  +     qg+ + C+
+       7c2l:H 356 EPQVYTLP-PSRDELT--KNQVSLTCLVKGFYP--SDIAVEWESNGQPE-----NNYKTTPPVLDS----DGSFFLYSKLTVDKSRW--QQGNVFSCS 437
+                  799****9.8888774..9**************..9*******999988.....566777777775....45666778888876543..5******** PP
+
+                  xxxxxxx RF
+  alpaca_H_C1 107 VaHpall 113
+                  V H al+
+       7c2l:H 438 VMHEALH 444
+                  ***9744 PP
+
+>> rabbit_H_C1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.1   0.0      0.57      0.69      24      50 ..      13      36 ..       4      41 .. 0.79
+   2 !   85.9   5.6   1.8e-27   2.1e-27       5     123 ..     129     227 ..     126     247 .. 0.83
+   3 ?    4.0   0.9     0.031     0.038      46     108 ..     284     335 ..     249     347 .. 0.64
+   4 !   44.3   0.2   1.2e-14   1.4e-14       6     116 ..     353     446 ..     348     457 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: -0.1 bits;  conditional E-value: 0.57
+                 xxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  rabbit_H_C1 24 drlsetVvvGCLirgFfPllgplsvsW 50
+                 +  +++V v C + g+      ls+ W
+       7c2l:H 13 K-PGASVKVSCKVSGYTL--TELSMHW 36
+                 3.48999999******99..6899888 PP
+
+  == domain 2  score: 85.9 bits;  conditional E-value: 1.8e-27
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  rabbit_H_C1   5 vsatsPslfPLalplraltdrlsetVvvGCLirgFfPllgplsvsWnvsgeneissrsvvtfPpvksgtSlllllglyttcSllslpseqclqpeees 102
+                  +s + Ps+fPLa   + +    + t ++GCL++++fP  +p++vsWn++ +++    +v tfP+v +++      gly+ +S++++ps+       + 
+       7c2l:H 129 ASTKGPSVFPLAPSSKSTS---GGTAALGCLVKDYFP--EPVTVSWNSGALTS----GVHTFPAVLQSS------GLYSLSSVVTVPSSSL---GTQT 208
+                  57789******98777773...89*************..9**********999....********9998......9*************87...7888 PP
+
+                  xxxxxxxxxxxxxxxxxxxxx RF
+  rabbit_H_C1 103 vaChVehnasatnknqdltvp 123
+                   +C+V+h +s t++  d +v 
+       7c2l:H 209 YICNVNHKPSNTKV--DKKVE 227
+                  99******855555..55553 PP
+
+  == domain 3  score: 4.0 bits;  conditional E-value: 0.031
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  rabbit_H_C1  46 lsvsWnvsgeneissrsvvtfPpvksgtSlllllglyttcSllslpseqclqpeeesvaChVe 108
+                  +++ W v g   +  ++  t P  ++ +      + y  +S+l++ +++   ++ ++  C+V 
+       7c2l:H 284 VKFNWYVDG---VEVHNAKTKPREEQYN------STYRVVSVLTVLHQDW--LNGKEYKCKVS 335
+                  666666666...2335555555555555......5888888888888888..67777788886 PP
+
+  == domain 4  score: 44.3 bits;  conditional E-value: 1.2e-14
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  rabbit_H_C1   6 satsPslfPLalplraltdrlsetVvvGCLirgFfPllgplsvsWnvsgeneissrsvvtfPpvksgtSlllllglyttcSllslpseqclqpeeesv 103
+                  +  +P+++ L   + +lt   ++ V + CL++gF+P  + + v W+++g+ e    +  t Ppv  ++      g +  +S+l++ ++     + + +
+       7c2l:H 353 QPREPQVYTLPPSRDELT---KNQVSLTCLVKGFYP--SDIAVEWESNGQPE---NNYKTTPPVLDSD------GSFFLYSKLTVDKSRW--QQGNVF 434
+                  6789*************6...68*************..9**********777...678899***9999......99************99..8999** PP
+
+                  xxxxxxxxxxxxx RF
+  rabbit_H_C1 104 aChVehnasatnk 116
+                   C+V h a   n+
+       7c2l:H 435 SCSVMHEALH-NH 446
+                  *******533.33 PP
+
+>> mouse_L_CC  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.1   3.8   2.9e-06   3.4e-06      10     130 ..     134     234 ..     127     248 .. 0.83
+   2 !   25.8   0.2   5.7e-09   6.9e-09       9     126 ..     248     351 ..     242     353 .. 0.89
+   3 !   54.7   0.3   7.3e-18   8.8e-18       3     123 ..     351     453 ..     349     457 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 17.1 bits;  conditional E-value: 2.9e-06
+                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  mouse_L_CC  10 PsltlfPPsseelklllenkatlvClisnfspllsgvtvaWkadGtPitqllgvdtsnPtkesnllllllnkymassfllltadaWllrshssfsCqvt 108
+                 Ps+  + Pss          a+l Cl+ +++p    vtv+W      +t   gv t     +s         y  ss +++ +        +++ C+v 
+      7c2l:H 134 PSVFPLAPSSKSTS---GGTAALGCLVKDYFP--EPVTVSWN--SGALTS--GVHTFPAVLQSS------GLYSLSSVVTVPSSSL---GTQTYICNVN 214
+                 55555558988888...889************..9******6..457999..****99999997......67999********999...7889****** PP
+
+                 xxxxxxxxxxxxxxxxxxxxxx RF
+  mouse_L_CC 109 hellllGdtvekslsraeClll 130
+                 h        v+k + +  C  +
+      7c2l:H 215 HK--PSNTKVDKKVEPKSCDKT 234
+                 **..66777**********843 PP
+
+  == domain 2  score: 25.8 bits;  conditional E-value: 5.7e-09
+                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  mouse_L_CC   9 tPsltlfPPsseelklllenkatlvClisnfspllsgvtvaWkadGtPitqllgvdtsnPtkesnllllllnkymassfllltadaWllrshssfsCqv 107
+                  Ps+ lfPP + +   ++ +   + C++ + s     v+ +W +dG  +        ++P  e+      ++ y   s l++  + W   + + + C+v
+      7c2l:H 248 GPSVFLFPPKPKDTL-MISRTPEVTCVVVDVSHEDPEVKFNWYVDGVEVHN----AKTKPREEQY-----NSTYRVVSVLTVLHQDW--LNGKEYKCKV 334
+                 69********99876.678888899********99**************99....6677877764.....689**************..88999***** PP
+
+                 xxxxxxxxxxxxxxxxxxx RF
+  mouse_L_CC 108 thellllGdtvekslsrae 126
+                      +l   +ek++s+a+
+      7c2l:H 335 SNK--ALPAPIEKTISKAK 351
+                 *99..78899******996 PP
+
+  == domain 3  score: 54.7 bits;  conditional E-value: 7.3e-18
+                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  mouse_L_CC   3 lGqPkstPsltlfPPsseelklllenkatlvClisnfspllsgvtvaWkadGtPitqllgvdtsnPtkesnllllllnkymassfllltadaWllrshs 101
+                  GqP+  P +  +PPs +el    +n+  l Cl+  f+p  s + v+W  +G P       +t+ P  +s+        +   s l++    W  ++ +
+      7c2l:H 351 KGQPR-EPQVYTLPPSRDELT---KNQVSLTCLVKGFYP--SDIAVEWESNGQPENN---YKTTPPVLDSD------GSFFLYSKLTVDKSRW--QQGN 432
+                 69998.599999*********...***************..*************877...99****99998......688888999999999*..**** PP
+
+                 xxxxxxxxxxxxxxxxxxxxxx RF
+  mouse_L_CC 102 sfsCqvthellllGdtveksls 123
+                  fsC v he +l+ +  +ksls
+      7c2l:H 433 VFSCSVMHE-ALHNHYTQKSLS 453
+                 *********.888899999998 PP
+
+>> rat_L_CC  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.4   2.4   1.7e-08     2e-08      10     130 ..     134     234 ..     127     247 .. 0.82
+   2 !   19.5   0.3   5.5e-07   6.6e-07       9     126 ..     248     351 ..     241     356 .. 0.85
+   3 !   53.1   0.2   2.4e-17   2.8e-17       4     123 ..     352     453 ..     350     457 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 24.4 bits;  conditional E-value: 1.7e-08
+               xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  rat_L_CC  10 PsltlfPPsseelkllltdkatlvclvsdfyPllsvvevvWkadGaPisqllGvetaqPtkqnnlllllllkyiassyllltakaWllesrssyscqvthe 110
+               Ps+  + Pss       +  a+l clv d++P    v+v W +    ++   Gv+t   + q+       + y  ss + + + +      ++y c v h 
+    7c2l:H 134 PSVFPLAPSSKSTS---GGTAALGCLVKDYFP--EPVTVSWNS--GALTS--GVHTFPAVLQSS------GLYSLSSVVTVPSSSL---GTQTYICNVNHK 216
+               55555559998888...999************..99*****64..45888..9****9999999......78999**999999998...6789******** PP
+
+               xxxxxxxxxxxxxxxxxxxx RF
+  rat_L_CC 111 llllentvekslsraecvll 130
+                   +  v+k + +  c  +
+    7c2l:H 217 --PSNTKVDKKVEPKSCDKT 234
+               ..556669******999843 PP
+
+  == domain 2  score: 19.5 bits;  conditional E-value: 5.5e-07
+               xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  rat_L_CC   9 tPsltlfPPsseelkllltdkatlvclvsdfyPllsvvevvWkadGaPisqllGvetaqPtkqnnlllllllkyiassyllltakaWllesrssyscqvth 109
+                Ps+ lfPP   +   +++    + c+v d      +v+  W  dG  +      +t     q n        y   s l +  + W     ++y c+v  
+    7c2l:H 248 GPSVFLFPPKPKDTL-MISRTPEVTCVVVDVSHEDPEVKFNWYVDGVEVHN---AKTKPREEQYN------STYRVVSVLTVLHQDW--LNGKEYKCKVSN 336
+               59*******987755.56777778899999999899*************99...45544456777......79**************..78889******9 PP
+
+               xxxxxxxxxxxxxxxxx RF
+  rat_L_CC 110 ellllentvekslsrae 126
+                  +l   +ek++s+a 
+    7c2l:H 337 K--ALPAPIEKTISKAK 351
+               9..7788999*999996 PP
+
+  == domain 3  score: 53.1 bits;  conditional E-value: 2.4e-17
+               xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  rat_L_CC   4 dqPkatPsltlfPPsseelkllltdkatlvclvsdfyPllsvvevvWkadGaPisqllGvetaqPtkqnnlllllllkyiassyllltakaWllesrssys 104
+               +qP+  P +  +PPs +el     ++  l clv  fyP  s++ v W ++G P       +t+ P+  ++      + ++  s l +    W  +  + +s
+    7c2l:H 352 GQPR-EPQVYTLPPSRDELT---KNQVSLTCLVKGFYP--SDIAVEWESNGQPENN---YKTTPPVLDSD------GSFFLYSKLTVDKSRW--QQGNVFS 435
+               6787.5999999********...9**************..*************998...99*****9999......5677778888888999..99***** PP
+
+               xxxxxxxxxxxxxxxxxxx RF
+  rat_L_CC 105 cqvthellllentveksls 123
+               c v he +l++   +ksls
+    7c2l:H 436 CSVMHE-ALHNHYTQKSLS 453
+               ******.666667799998 PP
+
+>> rhesus_L_CC  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.4   4.7   1.6e-08   1.9e-08       9     131 ..     133     235 ..     127     247 .. 0.86
+   2 !   26.2   0.2   4.4e-09   5.3e-09       9     126 ..     248     351 ..     241     353 .. 0.87
+   3 !   43.5   0.2     2e-14   2.4e-14       3     112 ..     351     443 ..     349     453 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 24.4 bits;  conditional E-value: 1.6e-08
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  rhesus_L_CC   9 splvtlfppsseelqlllankatlvclisdfypllGavevawkadGsavnallGvettkpskqsnllllllnkyaassylsltsdqwllkshksyscq 106
+                   p+v  + pss+         a+l cl+ d++p    v v+w +   a+    Gv t     qs         y+ ss +++ s        ++y c+
+       7c2l:H 133 GPSVFPLAPSSKSTS---GGTAALGCLVKDYFP--EPVTVSWNS--GALTS--GVHTFPAVLQSS------GLYSLSSVVTVPSSSL---GTQTYICN 212
+                  578888889999988...8899***********..99*****75..46667..****9999****......89***********999...889***** PP
+
+                  xxxxxxxxxxxxxxxxxxxxxxxxx RF
+  rhesus_L_CC 107 vthellllGstvektvapaecslll 131
+                  v h+     + v+k v p  c  ++
+       7c2l:H 213 VNHK--PSNTKVDKKVEPKSCDKTH 235
+                  ****..78899**********9443 PP
+
+  == domain 2  score: 26.2 bits;  conditional E-value: 4.4e-09
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  rhesus_L_CC   9 splvtlfppsseelqlllankatlvclisdfypllGavevawkadGsavnallGvettkps.kqsnllllllnkyaassylsltsdqwllkshksysc 105
+                   p+v lfpp  ++   +++    + c++ d       v+  w  dG  v        tkp   q n        y   s l++    w     k y c
+       7c2l:H 248 GPSVFLFPPKPKDTL-MISRTPEVTCVVVDVSHEDPEVKFNWYVDGVEVHN----AKTKPReEQYN------STYRVVSVLTVLHQDW--LNGKEYKC 332
+                  69*******998876.67788889999999999999***********9988....46777516777......99**************..899***** PP
+
+                  xxxxxxxxxxxxxxxxxxxxx RF
+  rhesus_L_CC 106 qvthellllGstvektvapae 126
+                  +v+ +  +l + +ekt+++a+
+       7c2l:H 333 KVSNK--ALPAPIEKTISKAK 351
+                  ***99..88899*****9986 PP
+
+  == domain 3  score: 43.5 bits;  conditional E-value: 2e-14
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  rhesus_L_CC   3 lGqpkasplvtlfppsseelqlllankatlvclisdfypllGavevawkadGsavnallGvettkpskqsnllllllnkyaassylsltsdqwllksh 100
+                   Gqp+  p+v  +pps +el     n+ +l cl+  fyp    + v w ++G++ n     +tt p   s+        +   s l++   +w  +  
+       7c2l:H 351 KGQPR-EPQVYTLPPSRDELT---KNQVSLTCLVKGFYP--SDIAVEWESNGQPENN---YKTTPPVLDSD------GSFFLYSKLTVDKSRW--QQG 431
+                  58887.5899999********...9**************..99999**********9...89*********......5666778899999999..99* PP
+
+                  xxxxxxxxxxxx RF
+  rhesus_L_CC 101 ksyscqvthell 112
+                  + +sc v he+l
+       7c2l:H 432 NVFSCSVMHEAL 443
+                  **********54 PP
+
+>> rabbit_L_CC  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -4.0   0.0       8.1       9.7      44      59 ..      16      31 ..      14      35 .. 0.79
+   2 !   25.6   2.8   5.9e-09   7.1e-09      10     131 ..     134     235 ..     128     248 .. 0.86
+   3 !   21.3   0.1   1.3e-07   1.6e-07       9     126 ..     248     351 ..     242     354 .. 0.85
+   4 !   42.7   0.3   3.3e-14     4e-14       4     123 ..     352     453 ..     349     457 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: -4.0 bits;  conditional E-value: 8.1
+                 xxxxxxxxxxxxxxxx RF
+  rabbit_L_CC 44 gtltvaWkadGvtitq 59
+                  +++v+ k  G t+t 
+       7c2l:H 16 ASVKVSCKVSGYTLTE 31
+                 5789999999999987 PP
+
+  == domain 2  score: 25.6 bits;  conditional E-value: 5.9e-09
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  rabbit_L_CC  10 PlvilfPPsseelkllldnkatlvclisdfyPllgtltvaWkadGvtitqllGvdttqPskqsnllllllnkyaassflslsanqWllksysrvtcqv 107
+                  P+v  + Pss          a+l cl++d++P    +tv+W +   ++t   Gv t     qs         y  ss +++  +       +  +c v
+       7c2l:H 134 PSVFPLAPSSKSTS---GGTAALGCLVKDYFP--EPVTVSWNS--GALTS--GVHTFPAVLQSS------GLYSLSSVVTVPSSSL---GTQTYICNV 213
+                  88888889998887...889************..9******86..46899..***999999**9......8899*****9999988...77999**** PP
+
+                  xxxxxxxxxxxxxxxxxxxxxxxx RF
+  rabbit_L_CC 108 thellllGktvekslaPaecslll 131
+                   h        v+k + P  c  ++
+       7c2l:H 214 NHK--PSNTKVDKKVEPKSCDKTH 235
+                  ***..777889*********9443 PP
+
+  == domain 3  score: 21.3 bits;  conditional E-value: 1.3e-07
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  rabbit_L_CC   9 aPlvilfPPsseelkllldnkatlvclisdfyPllgtltvaWkadGvtitqllGvdttqPs.kqsnllllllnkyaassflslsanqWllksysrvtc 105
+                   P+v lfPP   +   +++    + c++ d       ++ +W  dGv +        t+P   q n      + y   s l++ ++ W     +   c
+       7c2l:H 248 GPSVFLFPPKPKDTL-MISRTPEVTCVVVDVSHEDPEVKFNWYVDGVEVHN----AKTKPReEQYN------STYRVVSVLTVLHQDW--LNGKEYKC 332
+                  59*******998874.688888999*****999999**************9....67777516777......9***************..7788999* PP
+
+                  xxxxxxxxxxxxxxxxxxxxx RF
+  rabbit_L_CC 106 qvthellllGktvekslaPae 126
+                  +v+    +l   +ek+++ a+
+       7c2l:H 333 KVSNK--ALPAPIEKTISKAK 351
+                  **998..66667777777665 PP
+
+  == domain 4  score: 42.7 bits;  conditional E-value: 3.3e-14
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  rabbit_L_CC   4 GqPvvaPlvilfPPsseelkllldnkatlvclisdfyPllgtltvaWkadGvtitqllGvdttqPskqsnllllllnkyaassflslsanqWllksys 101
+                  GqP   P v  +PPs +el    +n+ +l cl++ fyP    + v+W ++G++        tt P   s+        +   s l++ +++W  +  +
+       7c2l:H 352 GQPR-EPQVYTLPPSRDELT---KNQVSLTCLVKGFYP--SDIAVEWESNGQPENN---YKTTPPVLDSD------GSFFLYSKLTVDKSRW--QQGN 432
+                  7885.799***********8...9**************..9***********9888...99*********......677788899*******..9999 PP
+
+                  xxxxxxxxxxxxxxxxxxxxxx RF
+  rabbit_L_CC 102 rvtcqvthellllGktveksla 123
+                   + c v he +l+ + ++ksl+
+       7c2l:H 433 VFSCSVMHE-ALHNHYTQKSLS 453
+                  *********.888899999875 PP
+
+>> human_L_CC  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.2   6.1   9.2e-09   1.1e-08       9     131 ..     133     235 ..     127     247 .. 0.85
+   2 !   24.4   0.3   1.6e-08     2e-08       9     126 ..     248     351 ..     242     355 .. 0.87
+   3 !   41.2   0.2   1.1e-13   1.3e-13       3     112 ..     351     443 ..     349     453 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 25.2 bits;  conditional E-value: 9.2e-09
+                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  human_L_CC   9 apsvtlfppsseelqlllankatlvclisdfypllGavtvawkadgspvkvllGvetttpskqsnllllllnkyaassylsltpeqwllkshrsyscqv 107
+                  psv  + pss+         a+l cl+ d++p    vtv+w +    + +  Gv t     qs         y+ ss +++          ++y c+v
+      7c2l:H 133 GPSVFPLAPSSKSTS---GGTAALGCLVKDYFP--EPVTVSWNS--GALTS--GVHTFPAVLQSS------GLYSLSSVVTVPSSSL---GTQTYICNV 213
+                 59999999***9999...8899***********..99*****75..44556..9***99999**9......88*****998866666...889****** PP
+
+                 xxxxxxxxxxxxxxxxxxxxxxxx RF
+  human_L_CC 108 thellllGstvektvapaecslll 131
+                  h+     + v+k v p  c  ++
+      7c2l:H 214 NHK--PSNTKVDKKVEPKSCDKTH 235
+                 ***..78899**********9444 PP
+
+  == domain 2  score: 24.4 bits;  conditional E-value: 1.6e-08
+                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  human_L_CC   9 apsvtlfppsseelqlllankatlvclisdfypllGavtvawkadgspvkvllGvetttps.kqsnllllllnkyaassylsltpeqwllkshrsyscq 106
+                  psv lfpp  ++   +++    + c++ d       v+  w  dg  v+       t+p   q n        y   s l++  + w     + y c+
+      7c2l:H 248 GPSVFLFPPKPKDTL-MISRTPEVTCVVVDVSHEDPEVKFNWYVDGVEVHN----AKTKPReEQYN------STYRVVSVLTVLHQDW--LNGKEYKCK 333
+                 69*******998876.67788889999999999999**********99998....56666516777......99**************..8899***** PP
+
+                 xxxxxxxxxxxxxxxxxxxx RF
+  human_L_CC 107 vthellllGstvektvapae 126
+                 v+ +  +l + +ekt++ a+
+      7c2l:H 334 VSNK--ALPAPIEKTISKAK 351
+                 **99..78899****98775 PP
+
+  == domain 3  score: 41.2 bits;  conditional E-value: 1.1e-13
+                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  human_L_CC   3 lGqpkaapsvtlfppsseelqlllankatlvclisdfypllGavtvawkadgspvkvllGvetttpskqsnllllllnkyaassylsltpeqwllkshr 101
+                  Gqp+  p v  +pps +el     n+ +l cl+  fyp    + v w ++g p +     +tt p   s+        +   s l++   +w  +   
+      7c2l:H 351 KGQPR-EPQVYTLPPSRDELT---KNQVSLTCLVKGFYP--SDIAVEWESNGQPENN---YKTTPPVLDSD------GSFFLYSKLTVDKSRW--QQGN 432
+                 69998.5999999********...9**************..999**********999...89*********......667777889999999*..9999 PP
+
+                 xxxxxxxxxxx RF
+  human_L_CC 102 syscqvthell 112
+                  +sc v he+l
+      7c2l:H 433 VFSCSVMHEAL 443
+                 *********54 PP
+
+>> pig_L_CC  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.4   6.0   2.5e-10     3e-10      10     131 ..     134     235 ..     125     248 .. 0.86
+   2 !   12.6   0.1   7.9e-05   9.5e-05       9     123 ..     248     348 ..     243     351 .. 0.82
+   3 !   35.8   0.1   5.4e-12   6.5e-12       3     111 ..     351     442 ..     349     455 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 30.4 bits;  conditional E-value: 2.5e-10
+               xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  pig_L_CC  10 ptvnlfppsseelGllltnkatlvclisdfypllGavtvtwkaGsttvtqllGvettkpskqsnllllllnkyaassylalsasdwllksssGftcqvthe 110
+               p+v  + pss+         a+l cl+ d++p    vtv+w +G+  +t   Gv t     qs         y+ ss +++ +s      +  + c+v h+
+    7c2l:H 134 PSVFPLAPSSKSTS---GGTAALGCLVKDYFP--EPVTVSWNSGA--LTS--GVHTFPAVLQSS------GLYSLSSVVTVPSSSL---GTQTYICNVNHK 216
+               66666678888877...6789***********..99******997..567..9***99999**9......89***********999...7899******** PP
+
+               xxxxxxxxxxxxxxxxxxxxx RF
+  pig_L_CC 111 llllGtivektvtpsecalll 131
+                    t v+k v p  c  ++
+    7c2l:H 217 --PSNTKVDKKVEPKSCDKTH 235
+               ..899************9444 PP
+
+  == domain 2  score: 12.6 bits;  conditional E-value: 7.9e-05
+               xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  pig_L_CC   9 aptvnlfppsseelGllltnkatlvclisdfypllGavtvtwkaGsttvtqllGvettkpsk.qsnllllllnkyaassylalsasdwllksssGftcqvt 108
+                p+v lfpp  ++   +++    + c++ d       v   w   +  v +      tkp   q n        y   s l++   dw       + c+v+
+    7c2l:H 248 GPSVFLFPPKPKDTL-MISRTPEVTCVVVDVSHEDPEVKFNWYVDGVEVHN----AKTKPREeQYN------STYRVVSVLTVLHQDW--LNGKEYKCKVS 335
+               599******987754.45555667788888888888*************99....77888651666......89**************..88999*****9 PP
+
+               xxxxxxxxxxxxxxx RF
+  pig_L_CC 109 hellllGtivektvt 123
+                +  +l + +ekt++
+    7c2l:H 336 NK--ALPAPIEKTIS 348
+               99..66677888875 PP
+
+  == domain 3  score: 35.8 bits;  conditional E-value: 5.4e-12
+               xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  pig_L_CC   3 lGqpkaaptvnlfppsseelGllltnkatlvclisdfypllGavtvtwkaGsttvtqllGvettkpskqsnllllllnkyaassylalsasdwllksssGf 103
+                Gqp+  p v  +pps +el     n+ +l cl+  fyp    ++v w + +    +    +tt p   s+        +   s l++  s w  +    f
+    7c2l:H 351 KGQPR-EPQVYTLPPSRDELT---KNQVSLTCLVKGFYP--SDIAVEWESNGQPENN---YKTTPPVLDSD------GSFFLYSKLTVDKSRW--QQGNVF 434
+               68998.699************...***************..99******99988777...89*********......66777899********..999*** PP
+
+               xxxxxxxx RF
+  pig_L_CC 104 tcqvthel 111
+               +c v he+
+    7c2l:H 435 SCSVMHEA 442
+               *******4 PP
+
+>> human_K_CC  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.8   2.2     4e-08   4.8e-08       9     128 ..     133     232 ..     125     247 .. 0.81
+   2 !   29.9   0.2   2.6e-10   3.1e-10       9     124 ..     248     349 ..     241     355 .. 0.82
+   3 !   23.4   0.2   2.7e-08   3.2e-08      10     114 ..     357     443 ..     354     453 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 22.8 bits;  conditional E-value: 4e-08
+                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  human_K_CC   9 apsvfifppsdeqlklllsGtasvvcllnnfypllreakvqwkvdnalqsGllnsqesvteqdskdlllllstyslsstltlskadyllekhkvyacev 107
+                  psvf + ps +       Gta++ cl+ +++p      v w    al sG + +  +v  q s         yslss +t+  +       + y c+v
+      7c2l:H 133 GPSVFPLAPSSKSTS---GGTAALGCLVKDYFP--EPVTVSWNS-GALTSG-VHTFPAVL-QSSG-------LYSLSSVVTVPSSSL---GTQTYICNV 213
+                 6*********98887...9**************..8899***85.79****.55555554.4444.......6*********99999...6799***** PP
+
+                 xxxxxxxxxxxxxxxxxxxxx RF
+  human_K_CC 108 thqGlllsspvtksfnrGecl 128
+                  h+     + v k  +   c 
+      7c2l:H 214 NHKP--SNTKVDKKVEPKSCD 232
+                 **99..667788877777774 PP
+
+  == domain 2  score: 29.9 bits;  conditional E-value: 2.6e-10
+                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  human_K_CC   9 apsvfifppsdeqlklllsGtasvvcllnnfypllreakvqwkvdnalqsGllnsqesvteqdskdlllllstyslsstltlskadyllekhkvyacev 107
+                  psvf+fpp  +    ++s t  v c++ +      e k +w vd        n++    e        ++sty + s lt+   d+     k y c+v
+      7c2l:H 248 GPSVFLFPPKPKDTL-MISRTPEVTCVVVDVSHEDPEVKFNWYVDGVEV-H--NAKTKPRE---E---QYNSTYRVVSVLTVLHQDW--LNGKEYKCKV 334
+                 7********977665.69************999999*********6532.2..44433332...2...3569***************..78899***** PP
+
+                 xxxxxxxxxxxxxxxxx RF
+  human_K_CC 108 thqGlllsspvtksfnr 124
+                 + +   l +p+ k+  +
+      7c2l:H 335 SNKA--LPAPIEKTISK 349
+                 ***9..*****998765 PP
+
+  == domain 3  score: 23.4 bits;  conditional E-value: 2.7e-08
+                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  human_K_CC  10 psvfifppsdeqlklllsGtasvvcllnnfypllreakvqwkvdnalqsGllnsqesvteqdskdlllllstyslsstltlskadyllekhkvyacevt 108
+                 p v+ +pps ++l        s+ cl+  fyp   +  v+w  +   q   +n + +    ds        ++ l s lt+ k+ +  ++  v++c v 
+      7c2l:H 357 PQVYTLPPSRDELT---KNQVSLTCLVKGFYP--SDIAVEWESNG--QPE-NNYKTTPPVLDSDG------SFFLYSKLTVDKSRW--QQGNVFSCSVM 439
+                 99*******99998...7999***********..99*****8654..444.34454444556544......78899**********..9********** PP
+
+                 xxxxxx RF
+  human_K_CC 109 hqGlll 114
+                 h+   l
+      7c2l:H 440 HEA--L 443
+                 *98..5 PP
+
+>> rat_H_C1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.0   0.0     0.058     0.069      26      57 ..      14      43 ..       4      84 .. 0.76
+   2 !   38.5   5.8   6.7e-13     8e-13       4     124 ..     128     227 ..     125     248 .. 0.82
+   3 ?    3.5   0.2      0.04     0.048      29      57 ..     267     295 ..     241     340 .. 0.70
+   4 !   17.0   0.3   2.8e-06   3.3e-06       8      57 ..     355     399 ..     349     453 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 3.0 bits;  conditional E-value: 0.058
+              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  rat_H_C1 26 ltesVtlsClvkdvfplldPlTlaWesdllsT 57
+                +sV +sC v ++   l  l + W  + +  
+    7c2l:H 14 PGASVKVSCKVSGYT--LTELSMHWVRQAPGK 43
+              569***********9..477888887776655 PP
+
+  == domain 2  score: 38.5 bits;  conditional E-value: 6.7e-13
+               xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  rat_H_C1   4 lvsvKePdLyllkeCkaeNqllltesVtlsClvkdvfplldPlTlaWesdllsTllllvtsnfnkvesdlllllllllkiTilQvsvwaknlllllakNlT 104
+                +s K P+ ++l + +            l+Clvkd+fp  +P+T++W+s  l       +  f+ v          +l    + v+v++     l ++ + 
+    7c2l:H 128 SASTKGPSVFPLAPSSKSTS---GGTAALGCLVKDYFP--EPVTVSWNSGALTS----GVHTFPAVLQS------SGLYSLSSVVTVPSSS---LGTQTYI 210
+               689***********887774...55668**********..************99....78889999773......6677888999999995...678999* PP
+
+               xxxxxxxxxxxxxxxxxxxx RF
+  rat_H_C1 105 CtvTnasllkkkfksdklir 124
+               C v +    ++  k dk + 
+    7c2l:H 211 CNVNHK---PSNTKVDKKVE 227
+               *****9...99999999874 PP
+
+  == domain 3  score: 3.5 bits;  conditional E-value: 0.04
+               xxxxxxxxxxxxxxxxx.xxxxxxxxxxxx RF
+  rat_H_C1  29 sVtlsClvkdvfplldP.lTlaWesdllsT 57 
+                  + C+v+dv  + dP +   W+ d    
+    7c2l:H 267 TPEVTCVVVDVS-HEDPeVKFNWYVDGVEV 295
+               55799*******.69998999***998776 PP
+
+  == domain 4  score: 17.0 bits;  conditional E-value: 2.8e-06
+               xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  rat_H_C1   8 KePdLyllkeCkaeNqllltesVtlsClvkdvfplldPlTlaWesdllsT 57 
+               +eP+ y l + + e      ++V l Clvk+++p    + + Wes+    
+    7c2l:H 355 REPQVYTLPPSRDELT---KNQVSLTCLVKGFYP--SDIAVEWESNGQPE 399
+               6899999999888875...899***********9..88******986443 PP
+
+>> rabbit_K_CC  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    9.8   4.3   0.00045   0.00054       9     107 ..     133     213 ..     128     222 .. 0.73
+   2 !   19.2   0.1   5.8e-07   6.9e-07      10     118 ..     249     343 ..     246     352 .. 0.76
+   3 !   29.9   0.2     3e-10   3.6e-10       6     109 ..     353     440 ..     348     447 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 9.8 bits;  conditional E-value: 0.00045
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  rabbit_K_CC   9 apsvllfppskeeltllltGtativcvankfypllsditvtwkvdGttqqsllGiensktpqspedlllllntyslsstlsltsaqyllnshsvytce 106
+                   psv+ + ps +  +    Gta++ c+   ++p    +tv+w     t  s  G+     p            yslss +++ s+         y c+
+       7c2l:H 133 GPSVFPLAPSSKSTS---GGTAALGCLVKDYFP--EPVTVSWNSGALT--S--GVHTF--PAVL----QSSGLYSLSSVVTVPSSSL---GTQTYICN 212
+                  599998888877766...8**************..99*****876655..4..44432..2222....2345688888888888777...45567776 PP
+
+                  x RF
+  rabbit_K_CC 107 v 107
+                  v
+       7c2l:H 213 V 213
+                  6 PP
+
+  == domain 2  score: 19.2 bits;  conditional E-value: 5.8e-07
+                  xxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  rabbit_K_CC  10 psvllfpps.keeltllltGtativcvankfypllsditvtwkvdGttqqsllGiensktpqspedlllllntyslsstlsltsaqyllnshsvytce 106
+                  psv+lfpp  k+ l   ++ t  + cv         ++   w vdG        + n+kt    e+   ++ ty + s l++    + ln    y c+
+       7c2l:H 249 PSVFLFPPKpKDTLM--ISRTPEVTCVVVDVSHEDPEVKFNWYVDGV------EVHNAKTKPREEQ---YNSTYRVVSVLTVLHQDW-LNG-KEYKCK 333
+                  9*******7356666..66677777777777666789*********7......4678999877777...889********9998888.665.469999 PP
+
+                  xxxxxxxxxxxx RF
+  rabbit_K_CC 107 vvqGslllaspi 118
+                  v + +  l +pi
+       7c2l:H 334 VSNKA--LPAPI 343
+                  98766..45555 PP
+
+  == domain 3  score: 29.9 bits;  conditional E-value: 3e-10
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  rabbit_K_CC   6 dpvapsvllfppskeeltllltGtativcvankfypllsditvtwkvdGttqqsllGiensktpqspedlllllntyslsstlsltsaqyllnshsvy 103
+                  +p  p v  +pps++elt       ++ c+   fyp  sdi+v w  +G  ++      n kt     d      ++ l s l++  +++      v+
+       7c2l:H 353 QPREPQVYTLPPSRDELT---KNQVSLTCLVKGFYP--SDIAVEWESNGQPEN------NYKTTPPVLD---SDGSFFLYSKLTVDKSRW--QQGNVF 434
+                  57889*************...88999**********..********9996544......4555444444...456777888888888877..777888 PP
+
+                  xxxxxx RF
+  rabbit_K_CC 104 tcevvq 109
+                  +c v+ 
+       7c2l:H 435 SCSVMH 440
+                  888765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (458 residues searched)
+Target model(s):                          18  (2682 nodes)
+Passed MSV filter:                        18  (1); expected 0.4 (0.02)
+Passed bias filter:                       15  (0.833333); expected 0.4 (0.02)
+Passed Vit filter:                        15  (0.833333); expected 0.0 (0.001)
+Passed Fwd filter:                        15  (0.833333); expected 0.0 (1e-05)
+Initial search space (Z):                 18  [actual number of targets]
+Domain search space  (domZ):              15  [number of targets reported over threshold]
+# CPU time: 0.08u 0.00s 00:00:00.08 Elapsed: 00:00:00.08
+# Mc/sec: 14.58
+//
+[ok]
