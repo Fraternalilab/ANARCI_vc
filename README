@@ -1,3 +1,6 @@
+ANARCI_VC is modified from ANARCI ([github page](https://github.com/oxpig/ANARCI)), which is used for the numbering for both V and C regions. In order to number C regions, `c_schemes.py` is added based on the original framework of ANARCI.
+
+The following are original readme file of ANARCI:
 
 ANARCI                                                 \\    //
 Antibody Numbering and Antigen Receptor ClassIfication  \\  //
