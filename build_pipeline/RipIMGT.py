@@ -3,7 +3,7 @@ A program to rip the sequences from genedb and parse them into fasta files
 
 Ripped from here:
 
-http://www.imgt.org/vquest/refseqh.html     
+http://www.imgt.org/vquest/refseqh.html
 """
 
 from html.parser import HTMLParser
@@ -18,7 +18,7 @@ fasta_outpath = os.path.join( file_path, "IMGT_sequence_files", "fastafiles" )
 
 # Define where to point the urls to.
 # We have heavy, kappa, lambda, alpha, beta, gamma and delta chains.
-# Both the v genes (imgt gapped amino acids) and the j genes (amino acids, are not gapped) 
+# Both the v genes (imgt gapped amino acids) and the j genes (amino acids, are not gapped)
 
 # Urls as of 04-12-14
 urls = { "HV": "http://www.imgt.org/IMGT_GENE-DB/GENElect?query=7.3+IGHV&species=%s",
@@ -34,11 +34,11 @@ urls = { "HV": "http://www.imgt.org/IMGT_GENE-DB/GENElect?query=7.3+IGHV&species
          "GV": "http://www.imgt.org/IMGT_GENE-DB/GENElect?query=7.3+TRGV&species=%s",
          "GJ": "http://www.imgt.org/IMGT_GENE-DB/GENElect?query=7.6+TRGJ&species=%s",
          "DV": "http://www.imgt.org/IMGT_GENE-DB/GENElect?query=7.3+TRDV&species=%s",
-         "DJ": "http://www.imgt.org/IMGT_GENE-DB/GENElect?query=7.6+TRDJ&species=%s"
-         
-         #"HC": "http://www.imgt.org/IMGT_GENE-DB/GENElect?query=7.3+IGHC&species=%s",
-         #"KC": "http://www.imgt.org/IMGT_GENE-DB/GENElect?query=7.3+IGKC&species=%s",
-         #"LC": "http://www.imgt.org/IMGT_GENE-DB/GENElect?query=7.3+IGLC&species=%s",
+         "DJ": "http://www.imgt.org/IMGT_GENE-DB/GENElect?query=7.6+TRDJ&species=%s",
+
+         "HC": "http://www.imgt.org/IMGT_GENE-DB/GENElect?query=7.3+IGHC&species=%s",
+         "KC": "http://www.imgt.org/IMGT_GENE-DB/GENElect?query=7.3+IGKC&species=%s",
+         "LC": "http://www.imgt.org/IMGT_GENE-DB/GENElect?query=7.3+IGLC&species=%s",
        }
 
 
@@ -57,7 +57,7 @@ all_species = ["Homo+sapiens",
 
 
 # These are retrieved for the tcr chains. There are a few more for gamma and delta chains but
-# they are rare (structurally anyway) that it does not seem worth it.   
+# they are rare (structurally anyway) that it does not seem worth it.
 all_tr_species = ["Homo+sapiens",
            "Mus",
 ]
@@ -81,7 +81,7 @@ class GENEDBParser(HTMLParser):
         start = sum([ 1 if l[0]==">" else 0 for l in split if len(l)])
         if self.currenttag=="pre" and (self.currentnamedent ==">" or start):
             # Two different ways of parsing the html based on how IMGT have formatted the pages.
-            # For some reason they format gene db differently sometimes (legacy?) 
+            # For some reason they format gene db differently sometimes (legacy?)
             if start > 1: # If you encounter more than one line in the data with a fasta ">" symbol, all sequences will be in the same packet
                 name, sequence = None, ""
                 for l in split:
@@ -123,7 +123,7 @@ class GENEDBParser(HTMLParser):
         self.feed(htmlstring)
         self._data
         return self._data
-        
+
 parser = GENEDBParser()
 
 
@@ -151,7 +151,7 @@ def write_fasta( sequences, species, gene_type ):
             print(sequence, file=outfile)
 
 def ripfasta(species, gene_type, force = True):
-    """ 
+    """
     Rip the fasta sequences for a species and gene type from IMGT
     """
     htmlfile = get_html(species, gene_type, force)
@@ -179,5 +179,5 @@ def main():
                 print("Failed to retrieve %s %s"%(species, gene_type), file=sys.stderr)
             else:
                 print("Parsed and saved %s %s"%(species, gene_type))
-         
+
 main()
