@@ -110,9 +110,9 @@ def read_alignment(input_file, read_all=False, region_name=""):
                         continue # Filter out partial sequences that IMGT have not....
                 elif region:
                     assert fields["region"]==region, "The region for some the entries is different"
-
-                region=fields["region"]
-                records[ (fields["species"], fields[ "allele" ] ) ] = sequence
+                else:
+                    region=fields["region"]
+                    records[ (fields["species"], fields[ "allele" ] ) ] = sequence
         except KeyError:
             print("Something wrong with the file %s"%input_file)
             continue
@@ -452,6 +452,7 @@ def main():
             ### Comment out if you want constant regions?
             if chain_type == "H":
                 c1alignments[ (species, chain_type) ]   = read_alignment( os.path.join( fasta_path , "%s_%sC.fasta"%(species, chain_type) ), region_name="CH1")
+
             #    c2alignments[ (species, chain_type) ]   = read_alignment( os.path.join( fasta_path , "%s_%sC.fasta"%(species, chain_type) ), region_name="CH2")
             #    c3alignments[ (species, chain_type) ]   = read_alignment( os.path.join( fasta_path , "%s_%sC.fasta"%(species, chain_type) ), region_name="CH3")
             else:
@@ -480,7 +481,7 @@ def main():
     c1alignments = format_c_genes(c1alignments, 'C1')
     #c2alignments = format_c_genes(c2alignments, 'C2')
     #c3alignments = format_c_genes(c3alignments, 'C3')
-
+    print (c1alignments[('Homo_sapiens', 'H')])
 
     all_valignments = format_v_genes(all_valignments)
     all_jalignments = format_j_genes(all_jalignments)
@@ -497,7 +498,7 @@ def main():
     # Write the constant domains each to file.
     #print (ccalignments)
     output_C_alignments(ccalignments, 'CC')
-    #output_C_alignments(c1alignments, 'C1')
+    output_C_alignments(c1alignments, 'C1')
     #output_C_alignments(c2alignments, 'C2')
     #output_C_alignments(c3alignments, 'C3')
 
