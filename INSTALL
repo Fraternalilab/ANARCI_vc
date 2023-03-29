@@ -12,7 +12,7 @@ python setup.py install
 for users without root access install locally using:
 
 python setup.py install --user
-or
+and then,
 python setup.py install --home="~"
 
 For more information about installing python programs see:
