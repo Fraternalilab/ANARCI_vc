@@ -5,6 +5,8 @@
 # Maintained by members of OPIG #
 #                               #
 
+# Modified by Dongjun Guo to coorperate with anarci_vc #
+
 import shutil, os, subprocess, importlib
 # Clean this out if it exists
 if os.path.isdir("build"):
@@ -12,15 +14,15 @@ if os.path.isdir("build"):
 
 from distutils.core import setup
 
-setup(name='anarci',
+setup(name='anarci_vc',
       version='1.3',
       description='Antibody Numbering and Receptor ClassIfication',
       author='James Dunbar',
       author_email='opig@stats.ox.ac.uk',
       url='http://opig.stats.ox.ac.uk/webapps/ANARCI',
-      packages=['anarci'], 
-      package_dir={'anarci': 'lib/python/anarci'},
-      #package_data={'anarci': ['dat/HMMs/ALL.hmm',
+      packages=['anarci_vc'], 
+      package_dir={'anarci_vc': 'lib/python/anarci_vc'},
+      #package_data={'anarci_vc': ['dat/HMMs/ALL.hmm',
       #                         'dat/HMMs/ALL.hmm.h3f',
       #                         'dat/HMMs/ALL.hmm.h3i',
       #                         'dat/HMMs/ALL.hmm.h3m',
@@ -35,7 +37,7 @@ if sys.argv[1] != "install":
     sys.exit(0)
 
 try:
-    ANARCI_LOC = importlib.util.find_spec("anarci").submodule_search_locations[0]
+    ANARCI_LOC = importlib.util.find_spec("anarci_vc").submodule_search_locations[0]
 except Exception as e:
     sys.stderr.write(e.message)
     sys.exit(1)
