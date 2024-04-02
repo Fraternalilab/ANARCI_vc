@@ -20,7 +20,7 @@ fasta_outpath = os.path.join( file_path, "IMGT_sequence_files", "fastafiles" )
 # We have heavy, kappa, lambda, alpha, beta, gamma and delta chains.
 # Both the v genes (imgt gapped amino acids) and the j genes (amino acids, are not gapped)
 
-# Urls as of 04-12-14
+# Urls as of 18-03-24
 urls = { "HV": "https://www.imgt.org/genedb/GENElect?query=7.3+IGHV&species=%s",
          "HJ": "https://www.imgt.org/genedb/GENElect?query=7.6+IGHJ&species=%s",
          "KV": "https://www.imgt.org/genedb/GENElect?query=7.3+IGKV&species=%s",
